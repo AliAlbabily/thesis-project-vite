@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -23,8 +23,17 @@ function Frame2() {
         color: theme.palette.text.secondary,
     }));
 
+    const navigate = useNavigate()
     const location = useLocation(); // get the current location object
     const { emojiName } = location.state; // access the state object passed from the previous component
+
+    function switchToTextInputFrame() {
+        navigate("/textinputframe")
+    }
+
+    function switchToDrawInputFrame() {
+        navigate("/drawinputframe")
+    }
 
     return ( 
         <Box sx={{ width: '100%' }}>
@@ -32,13 +41,13 @@ function Frame2() {
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 
                 <Grid item xs={5}>
-                    <Item onClick={() => console.log("Draw")}>
+                    <Item onClick={() => switchToTextInputFrame() }>
                         <img src={drawImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} />
                     </Item>
                 </Grid>
 
                 <Grid item xs={5}>
-                    <Item onClick={() => console.log("Type In")}>
+                    <Item onClick={() => switchToDrawInputFrame()}>
                         <img src={typeInImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} /></Item>
                 </Grid>
 
