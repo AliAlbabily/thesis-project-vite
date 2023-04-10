@@ -30,7 +30,7 @@ function TextInputFrame() {
         }
         }, [vantaEffect])
     return ( 
-        <div style={{width: "100%", height: "100%"}}>
+        <div style={{backgroundColor:'black', height: "100%"}}>
             
             <div ref={myRef}>
                 

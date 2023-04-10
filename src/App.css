@@ -1,22 +1,17 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 #root {
   background-color: aqua;
-
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .App {
   background-color: yellow;
-
-  min-height: 100vh;
-  
-  
+  height: 100%;
 }

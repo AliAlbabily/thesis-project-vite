@@ -36,7 +36,7 @@ function Frame2() {
     }
 
     return ( 
-        <Box sx={{ width: '100%' }}>
+        <Box style={{ padding: '50px' }}>
             <h1>What made you feel the way you are ?</h1>
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 

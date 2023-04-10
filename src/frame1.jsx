@@ -30,7 +30,7 @@ function Frame1() {
     }
 
     return ( 
-        <Box sx={{ width: '100%' }}>
+        <Box style={{ padding: '50px' }}>
             <h1>How are you feeling today ?</h1>
             <Grid container rowSpacing={5} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
                 <Grid item xs={6} md={4}>
