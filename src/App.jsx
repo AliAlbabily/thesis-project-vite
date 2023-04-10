@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename="/">
+    <Router basename="/">
           <Routes>
               <Route path="/" element={<Frame1 />} />
               <Route path="/frame2" element={<Frame2 />} />

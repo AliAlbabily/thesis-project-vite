@@ -1,0 +1,11 @@
+#genBackground{
+    background-color:black;
+    height: 100%;
+}
+
+#vantaCloud{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
