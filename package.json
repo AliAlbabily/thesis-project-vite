@@ -15,7 +15,9 @@
     "@mui/material": "^5.11.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "three": "^0.151.3",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
