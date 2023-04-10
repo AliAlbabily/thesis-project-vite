@@ -1,6 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 #root {
-  max-width: 1280px;
+  background-color: aqua;
+
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+  /* height: 100vh; */
+}
+
+.App {
+  background-color: yellow;
+
+  min-height: 100vh;
+  
+  
 }
