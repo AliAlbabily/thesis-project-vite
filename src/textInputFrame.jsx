@@ -2,6 +2,7 @@ import './textInputFrame.css'
 import React, { useState, useEffect, useRef } from 'react';
 import { TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
 
 import BIRDS from 'vanta/dist/vanta.fog.min';
 import * as THREE from "three";
@@ -58,6 +59,11 @@ function TextInputFrame() {
                     maxRows={10}
                   //  style={{maxWidth: "800px", minWidth: "240px", minHeight: "800px", maxHeight:"800px"}}
                 />
+
+                        <Button id = "submitButton"variant="contained" size="large">
+                        Submit
+                        </Button>
+
             </div>
 
         </div>
