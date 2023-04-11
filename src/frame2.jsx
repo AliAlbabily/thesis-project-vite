@@ -41,16 +41,15 @@ function Frame2() {
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 
                 <Grid item xs={5}>
-                    <Item onClick={() => switchToTextInputFrame() }>
+                    <Item onClick={() => switchToDrawInputFrame() }>
                         <img src={drawImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} />
                     </Item>
                 </Grid>
 
                 <Grid item xs={5}>
-                    <Item onClick={() => switchToDrawInputFrame()}>
+                    <Item onClick={() => switchToTextInputFrame()}>
                         <img src={typeInImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} /></Item>
                 </Grid>
-
             </Grid>
         </Box>
     );
