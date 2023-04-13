@@ -5,19 +5,20 @@ import pieChart from './emojisFeelings/pie-chart.png';
 
 function resultFrame() {
     const location = useLocation();
-    const [text, setText] = useState('');
+    const [text, setText] = useState(''); // TODO: använd denna senare !
 
     const currentDate = new Date();
     const formattedDate = currentDate.toLocaleDateString('en-US');
 
     useEffect(() => {
-        setText(location.state.text);
+        if (location.state) {
+            setText(location.state.text);
+        }
     }, []);
 
     return ( 
         <div>
             <h1>Date: {formattedDate}</h1>
-            <p>{text}</p>
             <img 
                 src={pieChart} 
                 alt="image" 
