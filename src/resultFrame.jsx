@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import pieChart from './emojisFeelings/pie-chart.png';
+
 function resultFrame() {
     const location = useLocation();
     const [text, setText] = useState('');
@@ -16,6 +18,12 @@ function resultFrame() {
         <div>
             <h1>Date: {formattedDate}</h1>
             <p>{text}</p>
+            <img 
+                src={pieChart} 
+                alt="image" 
+                style={{ width: '100%', maxWidth: '800px', height: 'auto' }} 
+                onClick={() => console.log("object")} 
+            />
         </div>
     );
 }
