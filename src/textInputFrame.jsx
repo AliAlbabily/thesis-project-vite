@@ -22,15 +22,13 @@ const useStyles = makeStyles(theme => ({
 function TextInputFrame() {
     const classes = useStyles();
     const navigate = useNavigate()
-    const inputRef = useRef();
     const [vantaEffect, setVantaEffect] = useState(null)
     const myRef = useRef(null)
+    const inputRef = useRef("");
 
-    function switchComponent(){
-      navigate("../resultFrame")
+    function switchComponent(inputText) {
+      navigate("../resultFrame" , { state: { text: inputText } })
     }
-
-
 
     useEffect(() => {
         if (!vantaEffect) {
@@ -51,32 +49,30 @@ function TextInputFrame() {
         return () => {
             if (vantaEffect) vantaEffect.destroy()
         }
-        }, [vantaEffect])
+    }, [vantaEffect])
+    
     return ( 
-        <div id = "genBackground">
+        <div id ="genBackground">
             
-            <div id= "vantaCloud"ref={myRef} style={{height: "100vh"}}
->
+            <div id= "vantaCloud"ref={myRef} style={{height: "100vh"}}>
                 <h1>Free your mind!</h1>
                 <TextField
-                    ref={inputRef}
+                    inputRef={inputRef}
                     className={classes.textField}
                     variant="outlined"
                     placeholder="Write your thoughts here !"
                     multiline
-                    
                     minRows={5}
                     maxRows={10}
-                  //  style={{maxWidth: "800px", minWidth: "240px", minHeight: "800px", maxHeight:"800px"}}
                 />
-
-                  <Button id = "submitButton"variant="contained" size="large"onClick={() => {
-                      switchComponent();
-                      console.log(inputRef.current.value);
-                    }}>
-                        Submit
-                        </Button>
-
+                <Button id ="submitButton" variant="contained" size="large" 
+                  onClick={() => {
+                    console.log(inputRef.current.value);
+                    switchComponent(inputRef.current.value);
+                  }}
+                >
+                  Submit
+                </Button>
             </div>
 
         </div>
