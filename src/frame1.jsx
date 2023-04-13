@@ -8,10 +8,10 @@ import Box from '@mui/material/Box';
 
 import angryImage from './emojisFeelings/Angry_Emoji_large.webp';
 import disgustImage from './emojisFeelings/disgust.png';
-import fearImage from './emojisFeelings/fear.jpg';
-import happyImage from './emojisFeelings/happy.jpg';
-import sadImage from './emojisFeelings/sad.jpg';
-import suprisedImage from './emojisFeelings/suprised.jpg';
+import fearImage from './emojisFeelings/fear.png';
+import happyImage from './emojisFeelings/happy.png';
+import sadImage from './emojisFeelings/sad.png';
+import suprisedImage from './emojisFeelings/suprised.png';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
