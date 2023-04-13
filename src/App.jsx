@@ -6,6 +6,7 @@ import Frame1 from './frame1'
 import Frame2 from './frame2';
 import TextInputFrame from './textInputFrame';
 import DrawInputFrame from './drawInputFrame';
+import ResultFrame from './resultFrame';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/frame2" element={<Frame2 />} />
               <Route path="/textinputframe" element={<TextInputFrame />} />
               <Route path="/drawinputframe" element={<DrawInputFrame />} />
+              <Route path= "/resultFrame" element ={<ResultFrame/>} />
           </Routes>
         </Router>
     </div>

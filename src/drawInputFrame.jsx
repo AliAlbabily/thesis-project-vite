@@ -3,6 +3,8 @@ import React, { useRef } from 'react';
 import './assets/css/drawInputFrame.css';
 import Button from '@mui/material/Button';
 import { ReactSketchCanvas } from 'react-sketch-canvas';
+import { useNavigate } from "react-router-dom";
+
 
 const styles = {
     border: '0.0625rem solid #9c9c9c'
@@ -10,7 +12,11 @@ const styles = {
 
 function DrawInputFrame() {
     const canvasRef = useRef(null);
+    const navigate = useNavigate()
 
+    function switchComponent(){
+        navigate("../resultFrame")
+    }
     return ( 
         <div id="drawContainer">
             <h1>Awaken your imagination !</h1>
@@ -33,13 +39,14 @@ function DrawInputFrame() {
                             .exportImage("png")
                             .then(data => {
                                 console.log(data);
+                                switchComponent();
                             })
                             .catch(e => {
                                 console.log(e);
                             });
                     }}
                     >
-                    Get Image
+                    Submit
                 </Button>
                 <Button
                     variant="outlined"
@@ -51,5 +58,7 @@ function DrawInputFrame() {
         </div>
     );
 }
+
+
 
 export default DrawInputFrame;
