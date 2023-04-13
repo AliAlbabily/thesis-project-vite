@@ -4,7 +4,6 @@ import { TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
-
 import BIRDS from 'vanta/dist/vanta.fog.min';
 import * as THREE from "three";
 
@@ -23,13 +22,16 @@ const useStyles = makeStyles(theme => ({
 function TextInputFrame() {
     const classes = useStyles();
     const navigate = useNavigate()
-
+    const inputRef = useRef();
     const [vantaEffect, setVantaEffect] = useState(null)
     const myRef = useRef(null)
 
     function switchComponent(){
       navigate("../resultFrame")
     }
+
+
+
     useEffect(() => {
         if (!vantaEffect) {
             setVantaEffect(BIRDS({
@@ -57,6 +59,7 @@ function TextInputFrame() {
 >
                 <h1>Free your mind!</h1>
                 <TextField
+                    ref={inputRef}
                     className={classes.textField}
                     variant="outlined"
                     placeholder="Write your thoughts here !"
@@ -69,6 +72,7 @@ function TextInputFrame() {
 
                   <Button id = "submitButton"variant="contained" size="large"onClick={() => {
                       switchComponent();
+                      console.log(inputRef.current.value);
                     }}>
                         Submit
                         </Button>
