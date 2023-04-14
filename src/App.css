@@ -6,12 +6,12 @@ html, body {
 }
 
 #root {
-  background-color: aqua;
+  /* background-color: aqua; */
   text-align: center;
   height: 100vh;
 }
 
 .App {
-  background-color: yellow;
+  background-color: aliceblue;
   height: 100%;
 }

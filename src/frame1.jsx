@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import './css/frame1.css';
 
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -31,7 +32,7 @@ function Frame1() {
 
     return ( 
         <Box style={{ padding: '50px' }}>
-            <h1>How are you feeling today ?</h1>
+            <h1 className="frame1-header">How are you feeling today ?</h1>
             <Grid container rowSpacing={5} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
                 <Grid item xs={6} md={4}>
                     <Item onClick={() => handleSelectedEmoji("Happy")}>

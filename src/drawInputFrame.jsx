@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import './assets/css/drawInputFrame.css';
+import './css/drawInputFrame.css';
 import Button from '@mui/material/Button';
 import { ReactSketchCanvas } from 'react-sketch-canvas';
 import { useNavigate } from "react-router-dom";

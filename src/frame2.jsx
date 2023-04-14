@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import './css/frame2.css';
 
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -10,9 +11,6 @@ import drawImage from './emojisFeelings/Draw.png';
 import typeInImage from './emojisFeelings/TypeIn.png';
 
 function Frame2() {
-    // TODO: Skapa states för all data som ska skickas senare till databasen
-    // TODO: Gör så att man inte kan gå vidare tills man har valt att antingen skriva eller rita
-
     // const [emojiName, setEmojiName] = useState("") 
 
     const Item = styled(Paper)(({ theme }) => ({
@@ -37,7 +35,7 @@ function Frame2() {
 
     return ( 
         <Box style={{ padding: '50px' }}>
-            <h1>What made you feel the way you are ?</h1>
+            <h1 className="frame2-header">What made you feel the way you are ?</h1>
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 
                 <Grid item xs={5}>
