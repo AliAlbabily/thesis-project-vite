@@ -4,4 +4,16 @@
     font-size: 48px; color: #b2f7fb; 
     text-shadow: 1px 1px 3px #000000;
     letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.input-Item {
+    cursor: pointer;
+}
+
+.input-type {
+    font-family: monospace;
+    font-size: larger;
+    padding: 5px;
+    color: black;
 }
