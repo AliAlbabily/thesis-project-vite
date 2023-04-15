@@ -5,16 +5,20 @@ import pieChart from './emojisFeelings/pie-chart.png';
 import BubbleComponent from './bubbleComponent';
 
 function resultFrame() {
-    const location = useLocation();
-    const [text, setText] = useState(''); // TODO: använd denna senare !
+    const location = useLocation(); // get the current location object
+    const [text, setText] = useState('');
     const [open, setOpen] = useState(false);
+    const [drawingSrc, setDrawingSrc] = useState('');
 
     const currentDate = new Date();
     const formattedDate = currentDate.toLocaleDateString('en-US');
 
     useEffect(() => {
-        if (location.state) {
+        if (location.state && location.state.text) {
             setText(location.state.text);
+        }
+        else if (location.state && location.state.drawingSrc) {
+            setDrawingSrc(location.state.drawingSrc)
         }
     }, []);
 
@@ -36,7 +40,7 @@ function resultFrame() {
                 onClick={() => handleClickOpen()} 
             />
 
-            <BubbleComponent open={open} onClose={handleClose} textInput={text} />
+            <BubbleComponent open={open} onClose={handleClose} textInput={text} drawingInput={drawingSrc} />
         </div>
     );
 }

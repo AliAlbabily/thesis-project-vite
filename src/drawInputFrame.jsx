@@ -14,8 +14,8 @@ function DrawInputFrame() {
     const canvasRef = useRef(null);
     const navigate = useNavigate()
 
-    function switchComponent(){
-        navigate("../resultFrame")
+    function switchComponent(drawingData) {
+        navigate("../resultFrame", { state: { drawingSrc: drawingData } })
     }
     return ( 
         <div id="drawContainer">
@@ -39,7 +39,7 @@ function DrawInputFrame() {
                             .exportImage("png")
                             .then(data => {
                                 console.log(data);
-                                switchComponent();
+                                switchComponent(data)
                             })
                             .catch(e => {
                                 console.log(e);
