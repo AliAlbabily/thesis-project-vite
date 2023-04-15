@@ -4,6 +4,8 @@ import './css/resultFrame.css';
 import pieChart from './emojisFeelings/chart.png';
 import BubbleComponent from './bubbleComponent';
 
+import PublicIcon from '@mui/icons-material/Public';
+
 function resultFrame() {
     const location = useLocation(); // get the current location object
     const [text, setText] = useState('');
@@ -33,6 +35,9 @@ function resultFrame() {
     return ( 
         <div>
             <h1 id="dateHeader">Date: {formattedDate}</h1>
+            <h2 id="result-description">
+                Here is how students all around the World <PublicIcon fontSize="large" id="world-icon" /> feel right now!
+            </h2>
             <img 
                 src={pieChart} 
                 alt="image" 
