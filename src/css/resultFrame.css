@@ -1,0 +1,21 @@
+
+#dateHeader {
+    font-family: 'Open Sans', sans-serif;
+    color: #b2f7fb;
+    text-shadow: 1px 1px 3px #000000;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    font-size: 3.5vw;
+}
+
+#pieChart {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#pieChart:hover {
+    opacity: 0.8;
+}

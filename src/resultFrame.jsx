@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-import pieChart from './emojisFeelings/pie-chart.png';
+import './css/resultFrame.css';
+import pieChart from './emojisFeelings/chart.png';
 import BubbleComponent from './bubbleComponent';
 
 function resultFrame() {
@@ -32,11 +32,11 @@ function resultFrame() {
 
     return ( 
         <div>
-            <h1>Date: {formattedDate}</h1>
+            <h1 id="dateHeader">Date: {formattedDate}</h1>
             <img 
                 src={pieChart} 
                 alt="image" 
-                style={{ width: '100%', maxWidth: '800px', height: 'auto' }} 
+                id="pieChart"
                 onClick={() => handleClickOpen()} 
             />
 
