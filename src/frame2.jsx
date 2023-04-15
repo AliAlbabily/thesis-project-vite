@@ -35,19 +35,19 @@ function Frame2() {
 
     return ( 
         <Box style={{ padding: '50px' }}>
-            <h1 className="frame2-header">Choose your way of expressing youreslf:</h1>
+            <h1 className="frame2-header">Choose your way of expressing yourself:</h1>
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 
                 <Grid item xs={5}>
                     <Item onClick={() => switchToDrawInputFrame() } className="input-Item">
-                        <img src={drawImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} />
+                        <img src={drawImage} alt="image" style={{ maxWidth: '150px', height: 'auto', width: '100%' }} />
                         <p className="input-type">Draw</p>
                     </Item>
                 </Grid>
 
                 <Grid item xs={5}>
                     <Item onClick={() => switchToTextInputFrame()} className="input-Item">
-                        <img src={typeInImage} alt="image" style={{ maxWidth: '100%', height: '150px' }} />
+                        <img src={typeInImage} alt="image" style={{ maxWidth: '150px', height: 'auto', width: '100%' }} />
                         <p className="input-type">Type</p>
                     </Item>
                 </Grid>
