@@ -2,13 +2,16 @@ import React from 'react';
 import './css/bubbleComponent.css';
 import carGift from './emojisFeelings/car-gift.png';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core';
+import ThreePIcon from '@mui/icons-material/ThreeP';
 
 function BubbleComponent({ open, onClose, textInput, drawingInput }) {
 
     return ( 
         <Dialog open={open} onClose={onClose}>
-            <DialogTitle>Latest thoughts</DialogTitle>
-            <DialogContent dividers>
+            <DialogTitle id="dialog-title">
+                <ThreePIcon fontSize="large" id="thought-icon" />
+            </DialogTitle>
+            <DialogContent id="dialog-content" dividers>
                 <ul className="list">
                     <li className="item">
                         {/* First item with your own data */}
@@ -29,7 +32,6 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                         {/* Third item hardcoded */}
                         <div className="content">
                             <h2>Student thought 3</h2>
-                            <p>Some text for item 3.</p>
                             <img src={carGift} alt="Item 3 Image Description" />
                         </div>
                     </li>

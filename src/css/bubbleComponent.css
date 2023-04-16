@@ -4,6 +4,15 @@
     max-width: 50%;
 }
 
+#dialog-title {
+    text-align: center;
+}
+
+#dialog-content {
+    background-image: url('../emojisFeelings/rotating-earth.gif'); 
+    background-size: cover;
+}
+
 .list {
     list-style: none;
     margin: 0;
@@ -15,7 +24,7 @@
     display: block;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #fff; /* White background for items */
+    background-color: #ffffffde; /* transparent background for items */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box-shadow for a slight depth effect */
     border-radius: 10px;
 }
@@ -32,15 +41,23 @@
     margin: 0;
     margin-bottom: 5px;
     font-size: 24px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-weight: 100;
 }
 
 .content p {
     flex: 1 1 100%;
     margin: 0 0 10px;
+    font-family: monospace;
 }
 
 .content img {
     flex: 1 1 100%;
     max-width: 100%;
     height: auto;
+}
+
+#thought-icon {
+    vertical-align: middle;
 }
