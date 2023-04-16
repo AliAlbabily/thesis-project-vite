@@ -1,6 +1,46 @@
-
 #drawing {
-    width: 400px;
+    /* width: 400px; */
     height: auto;
+    max-width: 50%;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* Transparent background */
+}
+
+.item {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for items */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box-shadow for a slight depth effect */
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.content h2 {
+    flex: 1 1 100%;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.content p {
+    flex: 1 1 100%;
+    margin: 0 0 10px;
+}
+
+.content img {
+    flex: 1 1 100%;
     max-width: 100%;
+    height: auto;
 }
