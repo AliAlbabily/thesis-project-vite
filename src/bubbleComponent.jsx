@@ -9,7 +9,7 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
     return ( 
         <Dialog open={open} onClose={onClose}>
             <DialogTitle id="dialog-title">
-                <ThreePIcon fontSize="large" id="thought-icon" />
+                Thoughts <ThreePIcon fontSize="large" id="thought-icon" />
             </DialogTitle>
             <DialogContent id="dialog-content" dividers>
                 <ul className="list">
