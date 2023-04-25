@@ -35,7 +35,7 @@ function Frame2() {
 
     return ( 
         <Box style={{ padding: '50px' }}>
-            <h1 className="frame2-header">Choose your way of expressing yourself:</h1>
+            <h1 className="frame2-header">Looks like your are feeling {emojiName} today. How would you like to express yourself? </h1>
             <Grid container columnSpacing={{ xs: 2, sm: 3, md: 3 }} style={{display: 'flex', justifyContent: 'center'}}>
 
                 <Grid item xs={5}>
