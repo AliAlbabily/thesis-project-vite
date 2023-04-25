@@ -14,3 +14,27 @@
 .emoji-Item {
     cursor: pointer;
 }
+
+#happy {
+    background-color: #f7f752;
+}
+
+#surprised {
+    background-color: #a372ba;
+}
+
+#scared {
+    background-color: #979787;
+}
+
+#angry {
+    background-color: #c54c33;
+}
+
+#sad {
+    background-color: #8ac0c8;
+}
+
+#disgusted {
+    background-color: #60a784;
+}
