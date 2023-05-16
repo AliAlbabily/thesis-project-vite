@@ -4,9 +4,13 @@ import './css/resultFrame.css';
 import pieChart from './emojisFeelings/chart.png';
 import BubbleComponent from './bubbleComponent';
 import PublicIcon from '@mui/icons-material/Public';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { IconButton } from '@material-ui/core';
+import { useNavigate } from "react-router-dom";
 
 function resultFrame() {
     const location = useLocation(); // get the current location object
+    const navigate = useNavigate()
     const [text, setText] = useState('');
     const [open, setOpen] = useState(false);
     const [drawingSrc, setDrawingSrc] = useState('');
@@ -31,9 +35,22 @@ function resultFrame() {
         setOpen(false);
     };
 
+    function switchToFirstFrame() {
+        navigate("/")
+    }
+
     return ( 
         <div>
-            <h1 id="dateHeader">Date: {formattedDate}</h1>
+            <div id="resultFrame-header">
+                <IconButton
+                    variant="outlined"
+                    color="inherit"
+                    onClick={() => { switchToFirstFrame() }}
+                >
+                    Home Page<ExitToAppIcon fontSize="large" />
+                </IconButton>
+                <h2 id="dateHeader">{formattedDate}</h2>
+            </div>
             <h2 id="result-description">
                 Click the image below for more details on students' feelings and thoughts worldwide! <PublicIcon fontSize="large" id="world-icon" />
             </h2>
