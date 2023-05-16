@@ -17,7 +17,7 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
     return ( 
         <Dialog open={open} onClose={onClose}>
             <DialogTitle id="dialog-title">
-                Thoughts <ThreePIcon fontSize="large" id="thought-icon" />
+                Feelings & Thoughts <ThreePIcon fontSize="large" id="thought-icon" />
             </DialogTitle>
             <DialogContent id="dialog-content" dividers>
                 <ul className="list">
@@ -27,7 +27,7 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                             return (
                                 <li key={index} className="item">
                                     <div className="content">
-                                        <h2>Student thought {index + 1}</h2>
+                                        <h2>Student {index + 1}</h2>
                                         {item.input ? <p>{item.input}</p> : null}
                                     </div>
                                 </li>
@@ -37,7 +37,7 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                             return (
                                 <li key={index} className="item">
                                     <div className="content">
-                                        <h2>Student thought {index + 1}</h2>
+                                        <h2>Student {index + 1}</h2>
                                         { item.input ? <img src={item.input} alt="image" id="drawing" /> : null }
                                     </div>
                                 </li>

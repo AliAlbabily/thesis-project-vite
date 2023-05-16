@@ -35,8 +35,7 @@ function resultFrame() {
         <div>
             <h1 id="dateHeader">Date: {formattedDate}</h1>
             <h2 id="result-description">
-                Here is how students all around the World <PublicIcon fontSize="large" id="world-icon" /> feel right now! 
-                Click the image below to see student feelings and thoughts.
+                Click the image below for more details on students' feelings and thoughts worldwide! <PublicIcon fontSize="large" id="world-icon" />
             </h2>
             <img 
                 src={pieChart} 

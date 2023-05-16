@@ -76,12 +76,12 @@ function TextInputFrame() {
         <div id ="genBackground">
             
             <div id= "vantaCloud"ref={myRef} style={{height: "100vh"}}>
-                <h1>Free your mind!</h1>
+                <h1>Express yourself by writing!</h1>
                 <TextField
                     inputRef={inputRef}
                     className={classes.textField}
                     variant="outlined"
-                    placeholder="Write your thoughts here !"
+                    placeholder="Write your thoughts, feelings and ideas here!"
                     multiline
                     minRows={5}
                     maxRows={10}
@@ -91,6 +91,7 @@ function TextInputFrame() {
                     console.log(inputRef.current.value);
                     const thoughts = loadThoughts()
                     saveNewThought(thoughts)
+                    alert("You have successfully submitted your self-expression!")
                     switchComponent(inputRef.current.value);
                   }}
                 >

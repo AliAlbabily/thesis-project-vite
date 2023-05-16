@@ -41,7 +41,7 @@ function DrawInputFrame() {
 
     return ( 
         <div id="drawContainer">
-            <h1>Awaken your imagination !</h1>
+            <h1>Express yourself by drawing!</h1>
 
             <ReactSketchCanvas
                 style={styles}
@@ -63,6 +63,7 @@ function DrawInputFrame() {
                                 console.log(data);
                                 const thoughts = loadThoughts()
                                 saveNewThought(thoughts, data)
+                                alert("You have successfully submitted your self-expression!")
                                 switchComponent(data)
                             })
                             .catch(e => {
