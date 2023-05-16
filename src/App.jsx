@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-    <Router>
+    <Router basename="/thesis-project-vite">
           <Routes>
               <Route path="/" element={<Frame1 />} />
               <Route path="/frame2" element={<Frame2 />} />

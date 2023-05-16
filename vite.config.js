@@ -7,5 +7,4 @@ export default defineConfig({
   server: {
     open: true // Add this line to open the browser automatically
   },
-  base: '/thesis-project-vite/',
 })
