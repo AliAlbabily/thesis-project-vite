@@ -17,6 +17,28 @@ function DrawInputFrame() {
     function switchComponent(drawingData) {
         navigate("../resultFrame", { state: { drawingSrc: drawingData } })
     }
+
+    function loadThoughts() {
+        let jsonThoughts = localStorage.getItem("thoughts");
+
+        if(jsonThoughts == null) {
+            localStorage.setItem("thoughts", JSON.stringify([]));
+            return [];
+        } else {
+            return JSON.parse(jsonThoughts);
+        }
+    }
+
+    function saveNewThought(thoughts, imageSrc) {
+        thoughts.push({
+            input: imageSrc,
+            inputType: "image"
+        })
+
+        let jsonThoughts = JSON.stringify(thoughts);
+        localStorage.setItem("thoughts", jsonThoughts);
+    }
+
     return ( 
         <div id="drawContainer">
             <h1>Awaken your imagination !</h1>
@@ -39,6 +61,8 @@ function DrawInputFrame() {
                             .exportImage("png")
                             .then(data => {
                                 console.log(data);
+                                const thoughts = loadThoughts()
+                                saveNewThought(thoughts, data)
                                 switchComponent(data)
                             })
                             .catch(e => {

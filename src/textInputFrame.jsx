@@ -50,6 +50,27 @@ function TextInputFrame() {
             if (vantaEffect) vantaEffect.destroy()
         }
     }, [vantaEffect])
+
+    function loadThoughts() {
+      let jsonThoughts = localStorage.getItem("thoughts");
+
+      if(jsonThoughts == null) {
+        localStorage.setItem("thoughts", JSON.stringify([]));
+        return [];
+      } else {
+        return JSON.parse(jsonThoughts);
+      }
+    }
+
+    function saveNewThought(thoughts) {
+      thoughts.push({
+          input: inputRef.current.value,
+          inputType: "text"
+      })
+
+      let jsonThoughts = JSON.stringify(thoughts);
+      localStorage.setItem("thoughts", jsonThoughts);
+    }
     
     return ( 
         <div id ="genBackground">
@@ -68,6 +89,8 @@ function TextInputFrame() {
                 <Button id ="submitButton" variant="contained" size="large" 
                   onClick={() => {
                     console.log(inputRef.current.value);
+                    const thoughts = loadThoughts()
+                    saveNewThought(thoughts)
                     switchComponent(inputRef.current.value);
                   }}
                 >

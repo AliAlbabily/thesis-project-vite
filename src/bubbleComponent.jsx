@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/bubbleComponent.css';
 import carGift from './emojisFeelings/car-gift.png';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core';
 import ThreePIcon from '@mui/icons-material/ThreeP';
 
 function BubbleComponent({ open, onClose, textInput, drawingInput }) {
+
+    const [thoughtsData, setThoughtsData] = useState([]);
+
+    useEffect(() => {
+        const storedData = localStorage.getItem('thoughts');
+        const dataArray = JSON.parse(storedData || '[]'); // Providing a fallback value in case storedData is null or cannot be parsed
+        console.log(dataArray);
+        setThoughtsData(dataArray);
+    }, []);
 
     return ( 
         <Dialog open={open} onClose={onClose}>
@@ -13,35 +22,31 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
             </DialogTitle>
             <DialogContent id="dialog-content" dividers>
                 <ul className="list">
-                    <li className="item">
-                        {/* First item with your own data */}
-                        <div className="content">
-                            <h2>Student thought 1</h2>
-                            { textInput ? <p>{textInput}</p> : null }
-                            { drawingInput ? <img src={drawingInput} alt="image" id="drawing" /> : null }
-                        </div>
-                    </li>
-                    <li className="item">
-                        {/* Second item hardcoded */}
-                        <div className="content">
-                            <h2>Student thought 2</h2>
-                            <p>Happiness is not something you acquire, it's something you create.</p>
-                        </div>
-                    </li>
-                    <li className="item">
-                        {/* Third item hardcoded */}
-                        <div className="content">
-                            <h2>Student thought 3</h2>
-                            <img src={carGift} alt="Item 3 Image Description" />
-                        </div>
-                    </li>
-                    <li className="item">
-                        {/* Fourth item hardcoded */}
-                        <div className="content">
-                            <h2>Student thought 4</h2>
-                            <p>Life is a precious gift. Cherish every moment and make the most of every opportunity.</p>
-                        </div>
-                    </li>
+                    
+                    {thoughtsData.map((item, index) => {
+                        if (item.inputType === "text") {
+                            return (
+                                <li key={index} className="item">
+                                    <div className="content">
+                                        <h2>Student thought {index + 1}</h2>
+                                        {item.input ? <p>{item.input}</p> : null}
+                                    </div>
+                                </li>
+                            )
+                        }
+                        else if (item.inputType === "image") {
+                            return (
+                                <li key={index} className="item">
+                                    <div className="content">
+                                        <h2>Student thought {index + 1}</h2>
+                                        { item.input ? <img src={item.input} alt="image" id="drawing" /> : null }
+                                    </div>
+                                </li>
+                            )
+                        }
+                        return null; // Add this line if you don't want to render anything for other cases
+                    })}
+
                 </ul>
             </DialogContent>
             <DialogActions>
