@@ -7,12 +7,12 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-import angryImage from './emojisFeelings/Angry_Emoji_large.webp';
-import disgustImage from './emojisFeelings/disgust.png';
-import fearImage from './emojisFeelings/fear.png';
-import happyImage from './emojisFeelings/happy.png';
-import sadImage from './emojisFeelings/sad.png';
-import suprisedImage from './emojisFeelings/suprised.png';
+import angryImage from './emojisFeelings/angry-face.png';
+import disgustImage from './emojisFeelings/disgusted-face.png';
+import fearImage from './emojisFeelings/fearful-face.png';
+import happyImage from './emojisFeelings/happy-face.png';
+import sadImage from './emojisFeelings/sad-face.png';
+import suprisedImage from './emojisFeelings/surprised-face.png';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

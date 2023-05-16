@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import './css/resultFrame.css';
 import pieChart from './emojisFeelings/chart.png';
 import BubbleComponent from './bubbleComponent';
-
 import PublicIcon from '@mui/icons-material/Public';
 
 function resultFrame() {
@@ -36,7 +35,8 @@ function resultFrame() {
         <div>
             <h1 id="dateHeader">Date: {formattedDate}</h1>
             <h2 id="result-description">
-                Here is how students all around the World <PublicIcon fontSize="large" id="world-icon" /> feel right now!
+                Here is how students all around the World <PublicIcon fontSize="large" id="world-icon" /> feel right now! 
+                Click the image below to see student feelings and thoughts.
             </h2>
             <img 
                 src={pieChart} 

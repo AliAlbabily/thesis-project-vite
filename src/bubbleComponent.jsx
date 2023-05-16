@@ -11,7 +11,6 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
     useEffect(() => {
         const storedData = localStorage.getItem('thoughts');
         const dataArray = JSON.parse(storedData || '[]'); // Providing a fallback value in case storedData is null or cannot be parsed
-        console.log(dataArray);
         setThoughtsData(dataArray);
     }, []);
 
