@@ -1,6 +1,7 @@
 
 #frame1-container {
     padding: 50px;
+    background-color: aliceblue;
 }
 
 .frame1-header {
@@ -37,4 +38,21 @@
 
 #disgusted {
     background-color: #60a784;
+}
+
+footer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #ccdbde;
+    border-radius: 10px;
+    padding: 5px 0;
+}
+
+footer p {
+    font-family: monospace;
+    margin-right: 10px;
+    color: black;
 }

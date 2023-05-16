@@ -13,6 +13,7 @@ import fearImage from './emojisFeelings/fearful-face.png';
 import happyImage from './emojisFeelings/happy-face.png';
 import sadImage from './emojisFeelings/sad-face.png';
 import suprisedImage from './emojisFeelings/surprised-face.png';
+import earthImage from './emojisFeelings/Earth-Transparent.png';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,6 +29,10 @@ function Frame1() {
     function handleSelectedEmoji(selectedEmojiName) {
         console.log(selectedEmojiName)
         navigate("../frame2", { state: { emojiName: selectedEmojiName } })
+    }
+
+    function switchToResultsFrame() {
+        navigate("/resultFrame")
     }
 
     return ( 
@@ -71,6 +76,10 @@ function Frame1() {
                     </Item>
                 </Grid>
             </Grid>
+            <footer onClick={() => switchToResultsFrame()} >
+                <p>Click here to check how students around the world are feeling today!</p>
+                <img src={earthImage} alt="image" style={{ maxWidth: '80px' }} />
+            </footer>
         </Box>
     );
 }
