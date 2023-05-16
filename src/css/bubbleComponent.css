@@ -30,7 +30,6 @@
 }
 
 .content {
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
@@ -44,6 +43,11 @@
     font-family: fantasy;
     letter-spacing: 1px;
     font-weight: 100;
+}
+
+.content div {
+    display: flex;
+    align-items: center;
 }
 
 .content p {

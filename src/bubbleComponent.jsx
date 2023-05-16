@@ -3,6 +3,7 @@ import './css/bubbleComponent.css';
 import carGift from './emojisFeelings/car-gift.png';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core';
 import ThreePIcon from '@mui/icons-material/ThreeP';
+import RateReviewIcon from '@mui/icons-material/RateReview';
 
 function BubbleComponent({ open, onClose, textInput, drawingInput }) {
 
@@ -27,7 +28,9 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                             return (
                                 <li key={index} className="item">
                                     <div className="content">
-                                        <h2>Student {index + 1}</h2>
+                                        <div>
+                                            <h2>Student {index + 1}</h2><RateReviewIcon fontSize="large" />
+                                        </div>
                                         {item.input ? <p>{item.input}</p> : null}
                                     </div>
                                 </li>
@@ -37,7 +40,9 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                             return (
                                 <li key={index} className="item">
                                     <div className="content">
-                                        <h2>Student {index + 1}</h2>
+                                        <div>
+                                            <h2>Student {index + 1}</h2><RateReviewIcon fontSize="large" />
+                                        </div>
                                         { item.input ? <img src={item.input} alt="image" id="drawing" /> : null }
                                     </div>
                                 </li>
