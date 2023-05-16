@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './css/bubbleComponent.css';
-import carGift from './emojisFeelings/car-gift.png';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import ThreePIcon from '@mui/icons-material/ThreeP';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 
@@ -54,7 +53,7 @@ function BubbleComponent({ open, onClose, textInput, drawingInput }) {
                 </ul>
             </DialogContent>
             <DialogActions>
-                <Button variant="text" onClick={onClose}>Close</Button>
+                <Button variant="text" color="inherit" onClick={onClose}>Close</Button>
             </DialogActions>
         </Dialog>
     );

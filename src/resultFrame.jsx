@@ -5,7 +5,7 @@ import pieChart from './emojisFeelings/chart.png';
 import BubbleComponent from './bubbleComponent';
 import PublicIcon from '@mui/icons-material/Public';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { IconButton } from '@material-ui/core';
+import IconButton from '@mui/material/IconButton';
 import { useNavigate } from "react-router-dom";
 
 function resultFrame() {
