@@ -56,3 +56,12 @@ footer p {
     margin-right: 10px;
     color: black;
 }
+
+/* ******************************* */
+/* Mobile */
+/* ******************************* */
+@media screen and (max-width: 500px) {
+    .frame1-header {
+        font-size: 8vw;
+    }
+}
